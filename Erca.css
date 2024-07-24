@@ -1,0 +1,1252 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: #ba9e00;
+    color: #545454;
+    text-align: center;
+    padding: 1%; /* Ajustado a un porcentaje del ancho de la ventana */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+header img {
+    max-width: 18%; /* Ajustado a un porcentaje del ancho del contenedor padre (header) */
+    height: auto;
+    margin-left: 1%; /* Ajustado a un porcentaje del ancho del contenedor padre (header) */
+}
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    header {
+        padding: 2%;
+    }
+
+    header img {
+        max-width: 30%;
+        margin-left: 2%;
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    header img {
+        max-width: 25%;
+        margin-left: 2%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    header img {
+        max-width: 20%;
+        margin-left: 1%;
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    header img {
+        max-width: 18%;
+        margin-left: 1%;
+    }
+}
+
+/* Laptop Mediana y de Escritorio */
+@media only screen and (min-width: 1025px) {
+    header img {
+        max-width: 18%;
+        margin-left: 1%;
+    }
+}
+
+
+
+
+
+nav {
+    background-color: #545454;
+    position: fixed; /* Hace que el menú sea estático */
+    top: 10%; /* Ajusta según la altura de tu encabezado */
+    width: 100%;
+    z-index: 3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 2%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 1% 1.5%;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #ffd700;
+}
+
+nav a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2%;
+    background-color: #ffd700;
+    position: absolute;
+    bottom: -2%;
+    left: 0;
+}
+
+/* Media Queries */
+
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    nav ul li {
+        margin: 0 3%;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 0.5% 1%;
+    }
+
+    nav a:hover::after {
+        height: 1%;
+        bottom: -1%;
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    nav a {
+        font-size: 16px;
+        padding: 1% 1.5%;
+    }
+
+    nav a:hover::after {
+        height: 1.5%;
+        bottom: -1.5%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    nav a {
+        font-size: 16px;
+        padding: 1% 1.5%;
+    }
+
+    nav a:hover::after {
+        height: 1.5%;
+        bottom: -1.5%;
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    nav a {
+        font-size: 16px;
+        padding: 1% 1.5%;
+    }
+
+    nav a:hover::after {
+        height: 1.5%;
+        bottom: -1.5%;
+    }
+}
+
+/* Laptop Mediana y de Escritorio */
+@media only screen and (min-width: 1025px) {
+    /* Mantén los estilos originales para tamaños mayores */
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3%;
+}
+
+#contacto p {
+    font-size: 26px; /* Ajusta el tamaño de fuente según sea necesario */
+    margin: 10px 0; /* Ajusta los márgenes según sea necesario */
+}
+
+.whatsapp-button,
+.email-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.email-button i {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto según sea necesario */
+}
+
+/* Media Queries */
+
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    footer {
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+        text-align: center;
+
+    }
+
+    #contacto {
+        padding-left: 0;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    footer {
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+        text-align: center;
+
+    }
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Laptop Mediana y de Escritorio */
+@media only screen and (min-width: 1025px) {
+    /* Ajustes adicionales según sea necesario */
+}
+
+
+.contenedor-linea-tiempo {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 16%;
+}
+
+.logo-empresa img {
+    margin-bottom: 15%; /* Ajusta el margen inferior según sea necesario */
+    
+}
+
+#linea-tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 15%; /* Ajusta el margen izquierdo según sea necesario */
+
+}
+
+.linea-tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    font-size: 26px;
+}
+
+    /* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .contenedor-linea-tiempo,
+    .linea-tiempo {
+        margin-left: 0;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .contenedor-linea-tiempo {
+        margin-left: 8%;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+
+    .linea-tiempo {
+        margin-left: 2%;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .contenedor-linea-tiempo {
+        margin-left: 10%;
+    }
+
+    .linea-tiempo {
+        margin-left: 4%;
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contenedor-linea-tiempo {
+        margin-left: 12%;
+    }
+
+    .linea-tiempo {
+        margin-left: 5%;
+    }
+}
+
+
+
+.evento {
+    position: relative;
+    cursor: pointer;
+    margin: 0 10%;
+
+
+
+}
+
+.evento i {
+    font-size: 50px;
+}
+
+
+ .evento:hover::before {
+    content: attr(data-texto); /* Muestra el contenido del atributo data-texto del elemento al que se hace hover */
+    position: absolute; /* Posiciona el elemento de forma absoluta con respecto al elemento padre más cercano con posición distinta a static */
+    top: -60px; /* Ajusta la posición del cuadro de texto en relación con la parte superior del elemento padre */
+    left: 50%; /* Ubica el elemento a la mitad del ancho del elemento padre */
+    transform: translateX(-50%); /* Centra horizontalmente el elemento en relación con su propio ancho */
+    background-color: #333; /* Color de fondo del cuadro de texto */
+    color: #fff; /* Color del texto dentro del cuadro */
+    padding: 20px; /* Espaciado interno del cuadro de texto */
+    border-radius: 5px; /* Borde redondeado del cuadro de texto */
+    font-size: 14px; /* Tamaño de la fuente del texto dentro del cuadro */
+    opacity: 0.9; /* Opacidad del cuadro de texto (valor entre 0 y 1) */
+    white-space: pre-line; /* Permite saltos de línea en el texto */
+    text-align: left; /* Alinea el texto a la izquierda dentro del cuadro */
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+
+
+
+}
+.copyright-line {
+    width: 100%;
+    text-align: center;
+    padding: .5%;
+    background-color: #333; /* Puedes ajustar el color de fondo si lo deseas */
+    color: #fff; /* Color del texto */
+}
+
+
+#google-maps-frame {
+
+    margin-left: 10%; /* Alinea a la derecha */
+    width: 40%; /* Ajusta según sea necesario */
+}
+
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .evento {
+        margin: 0 5%;
+    }
+
+    .evento i {
+        font-size: 40px;
+    }
+
+    .evento:hover::before {
+        top: -50px;
+        font-size: 12px;
+        width: 150px;
+    }
+
+    #google-maps-frame {
+        margin-left: 1%;
+        width: 50%;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .evento {
+        margin: 0 8%;
+    }
+
+    .evento i {
+        font-size: 45px;
+    }
+
+    .evento:hover::before {
+        top: -60px;
+        font-size: 14px;
+        width: 180px;
+    }
+
+    #google-maps-frame {
+        width: 50%;
+        margin-left: 1%;
+
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .evento {
+        margin: 0 10%;
+    }
+
+    #google-maps-frame {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+/* Agrega la siguiente línea si estás utilizando FontAwesome para los iconos */
+i {
+    margin-right: 5%;
+}
+.telefono-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.telefono-button i {
+    margin-right: 5px;
+    font-size: 40px; /* Ajusta el tamaño del icono según sea necesario */
+}
+
+
+
+#contacto a {
+    color: #ba9e00;
+    margin: 0 10%;
+    text-decoration: none;
+    display: flex;
+}
+
+#contacto a:hover {
+    text-decoration: underline;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .telefono-button i {
+        font-size: 30px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .telefono-button i {
+        font-size: 35px;
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .telefono-button i {
+        font-size: 35px;
+    }
+}
+/* Ajusta la altura de la sección "Inicio" */
+
+.inicio-section {
+    position: relative;
+    overflow: hidden;
+    height: 750px; /* Ajusta la altura según tus necesidades */
+    width: 100%;
+    margin-top: 120px; /* Ajusta el margen superior para dar espacio al menú */
+    z-index: 1; /* Asegura que la sección esté detrás del menú */
+    background-image: url('img/mio.png'); /* Fondo inicial */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+    animation: cambiarImagenInicio 20s infinite; /* Cambia la imagen cada 20 segundos */
+}
+
+@keyframes cambiarImagenInicio {
+    0%, 100% { background-image: url('img/mio.png'); }
+    25% { background-image: url('img/img\ 8.png'); }
+    50% { background-image: url('img/img\ 1.png'); }
+    75% { background-image: url('img/img\ 15.png'); }
+}
+
+
+/* Movil */
+@media only screen and (max-width: 600px) {
+    .inicio-section {
+        height: 400px; /* Ajusta la altura para dispositivos móviles */
+        margin-top: 80px; /* Ajusta el margen superior para dispositivos móviles */
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .inicio-section {
+        height: 500px; /* Ajusta la altura para tablets */
+        margin-top: 100px; /* Ajusta el margen superior para tablets */
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .inicio-section {
+        height: 600px; /* Ajusta la altura para laptops más pequeñas */
+        margin-top: 110px; /* Ajusta el margen superior para laptops más pequeñas */
+    }
+}
+
+
+#servicios {
+    background-color: #f8f8f8;
+    padding: 6% 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 2%;
+}
+
+.servicios-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.servicio-item {
+    flex-basis: 48%; /* Ajusta el tamaño de la base flex para tener dos elementos por fila */
+    background-color: #fff;
+    border: 1% solid #ddd;
+    border-radius: 8%;
+    padding: 1%;
+    margin: 1% 0;
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Helvetica', sans-serif; /* Cambia a la fuente Helvetica */
+    /* Agrega cualquier otro estilo que desees para esta sección */
+}
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .servicio-item {
+        flex-basis: 100%; /* Un solo elemento por fila para dispositivos móviles pequeños */
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .servicio-item {
+        flex-basis: 100%; /* Un solo elemento por fila para dispositivos móviles */
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .servicio-item {
+        flex-basis: 48%; /* Dos elementos por fila para tablets */
+    }
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .servicio-item {
+        flex-basis: 48%; /* Dos elementos por fila para laptops más pequeñas */
+    }
+}
+
+
+
+
+
+
+
+
+#servicios h2 {
+    position: relative;
+    font-size: 48px;
+
+
+}
+#servicios p {
+    position: relative;
+    font-size: 20px;
+    color:#000;
+    font-style: italic; /* Texto en cursiva para los párrafos en #quienes-somos */
+
+
+
+}
+
+#servicios h2::before,
+#servicios h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3%;
+    background-color: #ba9e00; /* Color de la línea (amarillo) */
+    top: 120%;
+}
+
+#servicios h2::before {
+    left: 0;
+}
+
+#servicios h2::after {
+    right: 0;
+}
+
+
+.servicio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #servicios h2 {
+        font-size: 36px;
+    }
+
+    #servicios p {
+        font-size: 18px;
+    }
+
+    #servicios h2::before,
+    #servicios h2::after {
+        height: 2.5%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    #servicios h2 {
+        font-size: 40px;
+    }
+
+    #servicios p {
+        font-size: 20px;
+    }
+}
+
+i {
+    font-size: 48px;
+    color: #ba9e00;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    i {
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    i {
+        font-size: 44px;
+        margin-bottom: 18px;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+
+#quienes-somos {
+    padding: 8% 0;
+    text-align: center;
+    background-image: url('img/fondo.png'); /* Reemplaza con la ruta o URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Ajusta la altura según tus necesidades */
+    font-family: 'Helvetica', sans-serif; /* Cambia a la fuente Helvetica */
+    /* Agrega cualquier otro estilo que desees para esta sección */
+}
+#quienes-somos h2 {
+    font-size: 3em; /* Ajusta el tamaño según tus necesidades */
+    color:#333;
+
+}
+
+#quienes-somos p {
+    font-size: 1.6em; /* Ajusta el tamaño según tus necesidades */
+    font-style: italic; /* Texto en cursiva para los párrafos en #quienes-somos */
+
+}
+
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  
+    #quienes-somos h2 {
+        font-size: 2.5em;
+    }
+
+    #quienes-somos p {
+        font-size: 1.4em;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    #quienes-somos h2 {
+        font-size: 2.8em;
+    }
+
+    #quienes-somos p {
+        font-size: 1.5em;
+    }
+}
+
+#mision-vision {
+    background-color: #f5f5f5;
+    padding: 8% 0;
+    text-align: center;
+}
+
+
+
+.mision-vision-item {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 4%;
+    
+}
+
+.mision-vision-item h3 {
+    font-size: 30px;
+    color: #333;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 0 1% 0; /* Puedes ajustar el tercer valor según tus necesidades */
+
+}
+
+.mision-vision-item p2 {
+    font-size: 22px;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic; /* Texto en cursiva para los párrafos en #quienes-somos */
+
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .mision-vision-item {
+        width: 100%;
+        margin-top: 8%;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+.mision-vision{
+  
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+        text-align: center;
+
+    
+}
+
+    .mision-vision-item h3 {
+        font-size: 26px;
+        margin-bottom: 1%;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+
+    .mision-vision-item p2 {
+        font-size: 20px;
+        flex-direction: column; /* Cambiado a dirección de columna para pantallas pequeñas */
+
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Mantén los estilos originales para tamaños mayores */
+}
+
+/* Laptop Chica */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .mision-vision-item {
+        width: 100%;
+        margin-top: 6%;
+    }
+}
+#experiencia {
+    padding: 170px 0; /* Ajusta el relleno según tus necesidades */
+    background-image: url('img/fonds.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    text-align: center;
+}
+
+.diferencia-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.texto-izquierdo {
+    max-width: 600px; /* Ajusta el ancho máximo del texto según tus necesidades */
+    text-align: left; /* Ajusta la alineación del texto según tus preferencias */
+}
+
+#experiencia h2 {
+    color: #ba9e00; /* Cambia el color del texto según tus preferencias */
+    font-size: 50px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    margin-bottom: 4%; /* Ajusta el margen inferior según tus necesidades */
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#experiencia p {
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    font-size: 30px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    line-height: 1.6; /* Ajusta el espacio entre líneas según tus necesidades */
+    font-style: italic; /* Texto en cursiva para los párrafos en #quienes-somos */
+    font-family:Arial, Helvetica, sans-serif;
+
+
+
+}
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #experiencia {
+        padding: 120px 0; /* Ajusta el relleno para dispositivos más pequeños */
+    }
+
+    #experiencia h2 {
+        font-size: 45px;
+        margin-bottom: 3%;
+    }
+
+    #experiencia p {
+        font-size: 25px;
+    }
+}
+
+
+.gallery {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8%;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    color: #fff;
+    opacity: 0; /* Invisible inicialmente */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1; /* Hace visible la superposición al hacer hover */
+}
+
+.image-overlay p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-card {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+}
+
+.diferencia-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-container {
+    width: 400px; /* Ancho fijo del contenedor de imágenes */
+    height: 500px; /* Altura fija del contenedor de imágenes */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo la relación de aspecto */
+}
+
+.texto-izquierdo {
+    flex: 1;
+    padding-left: 4%;
+    color:#fff;
+}
+
+
+.texto-izquierdo h2 {
+    color: #fff;
+}
+.imagen-fondo {
+    background-image: url('img/gg.png'); /* Reemplaza con la ruta o URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    /* Agrega cualquier otro estilo que desees para esta sección */
+}
+
+/* Estilos adicionales para el contenido dentro de la sección */
+.imagen-fondo h2 {
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+#doble-seccion {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .texto-izquierdo,
+    .imagen-fondo h2 {
+        padding: 2%;
+    }
+}
+
+.seccion-izquierda {
+    flex: 1;
+    padding: 2%;
+    position: relative;
+
+}
+
+
+.seccion-derecha {
+    flex: 1;
+    background-color: #545454;
+
+    
+    /* Sin imagen de fondo */
+}
+
+
+.seccion-izquierda p {
+    line-height: 1.6;
+    font-family: 'Helvetica', sans-serif; /* Utiliza la fuente Helvetica */
+    font-size: 18px; /* Tamaño de fuente 18px */
+    font-style: italic; /* Texto en cursiva */
+    font-size: 26px;
+
+}
+
+.seccion-derecha p {
+    line-height: 1.6;
+    font-family: 'Helvetica', sans-serif; /* Utiliza la fuente Helvetica */
+    font-size: 18px; /* Tamaño de fuente 18px */
+    font-style: italic; /* Texto en cursiva */
+}
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .seccion-izquierda,
+    .seccion-derecha {
+        flex: 1;
+        width: 100%;
+    }
+}
+.seccion-derecha li {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 5%; /* Adjust the margin as needed */
+    margin-top: 5%;
+    font-family: 'Helvetica', sans-serif; /* Utiliza la fuente Helvetica */
+    font-style: italic; /* Texto en cursiva */
+
+
+}
+
+
+.seccion-derecha h2 {
+    margin-bottom: 5%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Helvetica', sans-serif; /* Utiliza la fuente Helvetica */
+    font-size: 42px; /* Tamaño de fuente 42px */
+
+}
+
+.seccion-izquierda h2 {
+    margin-bottom: 5%;
+    font-family: 'Helvetica', sans-serif; /* Utiliza la fuente Helvetica */
+    font-size: 42px; /* Tamaño de fuente 42px */
+    color: #ba9e00; /* Color amarillo */
+}
+
+
+
+.seccion-izquierda img {
+    max-width: 60%; /* Puedes ajustar el porcentaje según tus necesidades */
+    height: auto;
+    border-radius: 8px;
+    display: block; /* Esto ayuda a centrar la imagen */
+    margin: 0 auto; /* Establece márgenes automáticos para centrar horizontalmente */
+}
+
+
+
+#diferencia {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#diferencia .texto-izquierd h2 {
+    font-size: 36px; /* Tamaño de la fuente para h2 */
+    color: #ba9e00; /* Color del texto */
+}
+
+#diferencia .texto-izquierd p {
+    font-size: 24px; /* Tamaño de la fuente para p */
+    color: #000; /* Color del texto */
+    font-style: italic; /* Texto en cursiva */
+}
+
+.fondo-image {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-image: url('img/img\ 3.png'); /* Ruta de la imagen de fondo */
+}
+
+.texto-izquierd {
+    position: absolute;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4%; /* Ajusta el espacio interno del recuadro según sea necesario */
+    max-width:35%; /* Ajusta el ancho máximo del recuadro según sea necesario */
+    border-radius: 1%;
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .seccion-izquierda img {
+        max-width: 80%;
+    }
+}
+.erca-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2%;
+    background-color: #f8f8f8;
+    background-image: url('img/fondo2.png'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta al tamaño del contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    text-align: center;
+}
+
+.erca-item {
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2%;
+    margin: 2% 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+    transition: transform 0.3s ease-in-out;
+}
+
+.erca-item:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.erca-item i {
+    color: #ba9e00;
+    font-size: 36px;
+    margin-bottom: 1%;
+}
+
+.erca-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 1%;
+}
+
+.erca-item p {
+    font-size: 18px;
+    color: #666;
+}
+.erca-section-title {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 2%;
+}
+/* Movil Chico */
+@media only screen and (max-width: 400px) {
+    .erca-section {
+        padding: 1%;
+    }
+
+    .erca-item {
+        width: 100%;
+    }
+
+    .erca-section-title {
+        font-size: 26px;
+    }
+}
+
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    .erca-section {
+        padding: 2%;
+    }
+
+    .erca-item {
+        width: 48%;
+    }
+
+    .erca-section-title {
+        font-size: 28px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .erca-item {
+        width: 48%;
+    }
+}
